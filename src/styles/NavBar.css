@@ -1,0 +1,90 @@
+/* Contenedor lateral (barra de navegación) */
+.navbar {
+  width: 350px;
+  height: 100vh;
+  border: 1px solid #000;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo especial para el primer enlace: Home */
+.navbar a:first-child {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+  padding: 12px 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.espacio-grande {
+  margin-bottom: 80px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.navbar a:first-child:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* Estilo general de los botones/cuadros */
+.navbar a:not(:first-child) {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+  border: 2px solid #000;
+  width: 100%;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 2px 2px 0 #000;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.navbar a:not(:first-child):hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+}
+
+/* Contenedor general que aloja navbar y contenido */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Contenido principal */
+.contenido {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.contenido h1 {
+  font-size: 4rem;
+  margin-bottom: 1px;
+  color: #000;
+}
+
+.contenido p {
+  font-size: 16px;
+  color: #333;
+}
