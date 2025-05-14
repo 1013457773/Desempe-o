@@ -1,4 +1,5 @@
-import { useNavigate, Link } from "react-router-dom"; // ← aquí ya está bien
+import { useNavigate, Link } from "react-router-dom";
+import { FaUser, FaLock, FaIdBadge, FaEnvelope } from "react-icons/fa";
 import "../styles/Auth.css";
 
 export default function Register() {
@@ -6,7 +7,6 @@ export default function Register() {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    // Después de registrar, redirige al Login
     navigate("/login");
   };
 
@@ -14,13 +14,23 @@ export default function Register() {
     <div className="form-box">
       <h2>Registrarse</h2>
       <form onSubmit={handleRegister}>
-        <input type="text" placeholder="Usuario" required />
-        <input type="password" placeholder="Contraseña" required />
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo" required />
-        <button type="submit" className="submit-btn">
-          Registrarse
-        </button>
+        <div className="input-icon-wrapper">
+          <FaUser className="input-icon" />
+          <input type="text" placeholder="Usuario" required />
+        </div>
+        <div className="input-icon-wrapper">
+          <FaLock className="input-icon" />
+          <input type="password" placeholder="Contraseña" required />
+        </div>
+        <div className="input-icon-wrapper">
+          <FaIdBadge className="input-icon" />
+          <input type="text" placeholder="Nombre" required />
+        </div>
+        <div className="input-icon-wrapper">
+          <FaEnvelope className="input-icon" />
+          <input type="email" placeholder="Correo" required />
+        </div>
+        <button type="submit" className="submit-btn">Registrarse</button>
         <p>
           <Link to="/login">¿Ya tienes una cuenta?</Link>
         </p>
