@@ -61,3 +61,7 @@ Sistema web para gestionar videojuegos con autenticación, registro y funcionali
 git https://github.com/1013457773/Desempe-o.git
 cd mi-proyecto
 ```
+
+2. el url de Vercel
+
+https://desempe-ozxh1lqzi-jose-luis-s-projects-cfa02120.vercel.app
