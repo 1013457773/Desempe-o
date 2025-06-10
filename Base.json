@@ -1,0 +1,12 @@
+{
+  "users": [{ "id": 1, "email": "admin@gamer.com", "password": "1234" }],
+  "games": [
+    {
+      "id": 1,
+      "title": "Zelda: Breath of the Wild",
+      "genre": "Aventura",
+      "price": 59.99,
+      "date": "2023-05-10"
+    }
+  ]
+}
