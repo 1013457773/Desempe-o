@@ -2,6 +2,7 @@ import { useState } from "react";
 import { registrarUsuario } from "../Servicios/Api";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import "./Registro.css";
 
 function Registro() {
   const [correo, setCorreo] = useState("");
@@ -22,50 +23,38 @@ function Registro() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-r from-purple-800 to-indigo-900">
-      <form
-        onSubmit={manejarEnvio}
-        className="bg-white p-8 rounded shadow-md w-full max-w-md"
-      >
-        <h2 className="text-2xl font-bold mb-6 text-center text-purple-800">
-          Crear cuenta 📝
-        </h2>
+    <div className="registro-container">
+      <div className="registro-formulario">
+        <div className="registro-ilustracion"></div>
 
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-          className="w-full p-2 mb-4 border rounded"
-          required
-        />
+        <form onSubmit={manejarEnvio} className="registro-formulario-contenido">
+          <h2 className="registro-titulo">📝 Crear cuenta gamer</h2>
 
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={contrasena}
-          onChange={(e) => setContrasena(e.target.value)}
-          className="w-full p-2 mb-4 border rounded"
-          required
-        />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+            required
+          />
 
-        <button
-          type="submit"
-          className="w-full bg-purple-700 text-white py-2 rounded hover:bg-purple-900"
-        >
-          Registrarme
-        </button>
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+            required
+          />
 
-        <p className="text-center mt-4">
-          ¿Ya tienes cuenta?{" "}
-          <a
-            href="/"
-            className="text-purple-700 underline hover:text-purple-900"
-          >
-            Inicia sesión
-          </a>
-        </p>
-      </form>
+          <button type="submit" className="boton-registro">
+            Registrarme
+          </button>
+
+          <p className="registro-enlace">
+            ¿Ya tienes cuenta? <a href="/">Inicia sesión 🔐</a>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }

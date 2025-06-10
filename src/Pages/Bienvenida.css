@@ -1,0 +1,65 @@
+.bienvenida-container {
+  background: linear-gradient(120deg, #ff00c8, #6c63ff, #00f0ff);
+  background-size: 300% 300%;
+  animation: fondoNeon 8s ease infinite;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+@keyframes fondoNeon {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bienvenida-overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #ff4bff;
+  max-width: 600px;
+  width: 90%;
+}
+
+.bienvenida-titulo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff100;
+  text-shadow: 2px 2px #ff00f7;
+}
+
+.bienvenida-subtitulo {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #ffccff;
+}
+
+.bienvenida-boton {
+  margin-top: 2rem;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  background: #00ffd5;
+  color: #140033;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffd5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bienvenida-boton:hover {
+  background: #fff100;
+  box-shadow: 0 0 12px #fff100;
+  color: #1a0033;
+}

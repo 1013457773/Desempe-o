@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { usarAutenticacion } from "../Contexto/Autenticacion";
 import Swal from "sweetalert2";
+import "./Inicio.css";
 
 function InicioSesion() {
   const [correo, setCorreo] = useState("");
@@ -20,49 +21,38 @@ function InicioSesion() {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-r from-purple-700 to-indigo-900">
-      <form
-        onSubmit={manejarEnvio}
-        className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
-      >
-        <h2 className="text-2xl font-bold text-center mb-6 text-purple-800">
-          Iniciar Sesión Gamer 🎮
-        </h2>
+    <div className="inicio-container">
+      <div className="inicio-formulario">
+        <div className="inicio-ilustracion"></div>
 
-        <input
-          type="email"
-          placeholder="Correo electrónico"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-          className="w-full p-2 mb-4 border rounded"
-          required
-        />
+        <form onSubmit={manejarEnvio} className="inicio-formulario-contenido">
+          <h2 className="inicio-titulo">🎮 Iniciar Sesión Gamer</h2>
 
-        <input
-          type="password"
-          placeholder="Contraseña"
-          value={contrasena}
-          onChange={(e) => setContrasena(e.target.value)}
-          className="w-full p-2 mb-4 border rounded"
-          required
-        />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            value={correo}
+            onChange={(e) => setCorreo(e.target.value)}
+            required
+          />
 
-        <button
-          type="submit"
-          className="w-full bg-purple-700 text-white py-2 rounded hover:bg-purple-900 transition"
-        >
-          Entrar
-        </button>
-        <p className="text-center mt-4">
-          ¿No tienes cuenta?{" "}
-          <Link
-            to="/registro"
-            className="text-purple-700 underline hover:text-purple-900"
-          >
-            Regístrate aquí
-          </Link>
-        </p>
-      </form>
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={contrasena}
+            onChange={(e) => setContrasena(e.target.value)}
+            required
+          />
+
+          <button type="submit" className="boton-acceso">
+            Entrar al mundo
+          </button>
+
+          <p className="inicio-enlace">
+            ¿No tienes cuenta? <Link to="/registro">Regístrate aquí 💾</Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }

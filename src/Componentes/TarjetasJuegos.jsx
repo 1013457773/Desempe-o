@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import "./TarjetasJuegos.css";
 
 function TarjetaJuego({ juego, alEliminar, alEditar }) {
   const confirmarEliminacion = async () => {
@@ -19,11 +20,9 @@ function TarjetaJuego({ juego, alEliminar, alEditar }) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between h-full border border-purple-200">
+    <div className="card-juego">
       <div>
-        <h2 className="text-xl font-bold text-purple-700 mb-2">
-          {juego.titulo}
-        </h2>
+        <h2>{juego.titulo}</h2>
         <p>
           <strong>🎮 Género:</strong> {juego.genero}
         </p>
@@ -35,17 +34,11 @@ function TarjetaJuego({ juego, alEliminar, alEditar }) {
         </p>
       </div>
 
-      <div className="flex justify-end gap-2 mt-4">
-        <button
-          onClick={() => alEditar(juego)}
-          className="px-3 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-500 transition"
-        >
+      <div className="acciones">
+        <button onClick={() => alEditar(juego)} className="editar">
           ✏️ Editar
         </button>
-        <button
-          onClick={confirmarEliminacion}
-          className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-700 transition"
-        >
+        <button onClick={confirmarEliminacion} className="eliminar">
           🗑️ Eliminar
         </button>
       </div>

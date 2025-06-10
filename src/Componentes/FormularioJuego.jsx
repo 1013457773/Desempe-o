@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { crearVideojuego, actualizarVideojuego } from "../Servicios/Api";
 import Swal from "sweetalert2";
+import "./FormularioJuego.css";
 
 function FormularioJuego({ alGuardar, juegoEditando, setJuegoEditando }) {
   const [formulario, setFormulario] = useState({
@@ -50,53 +51,46 @@ function FormularioJuego({ alGuardar, juegoEditando, setJuegoEditando }) {
   };
 
   return (
-    <form onSubmit={manejarEnvio} className="bg-white p-4 rounded shadow">
-      <h3 className="text-lg font-bold mb-4 text-purple-700">
-        {juegoEditando ? "Editar Videojuego" : "Agregar Nuevo Videojuego"}
+    <form onSubmit={manejarEnvio} className="formulario-juego">
+      <h3>
+        {juegoEditando ? "✏️ Editar Videojuego" : "🕹️ Agregar Nuevo Videojuego"}
       </h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
           name="titulo"
-          placeholder="Título"
+          placeholder="🎮 Título"
           value={formulario.titulo}
           onChange={manejarCambio}
-          className="p-2 border rounded"
           required
         />
         <input
           name="genero"
-          placeholder="Género"
+          placeholder="🎭 Género"
           value={formulario.genero}
           onChange={manejarCambio}
-          className="p-2 border rounded"
           required
         />
         <input
           name="precio"
-          placeholder="Precio"
+          placeholder="💸 Precio"
           type="number"
           value={formulario.precio}
           onChange={manejarCambio}
-          className="p-2 border rounded"
           required
         />
         <input
           name="fecha"
-          placeholder="Fecha"
+          placeholder="📅 Fecha de lanzamiento"
           type="date"
           value={formulario.fecha}
           onChange={manejarCambio}
-          className="p-2 border rounded"
           required
         />
       </div>
 
-      <button
-        type="submit"
-        className="mt-4 bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-900"
-      >
-        {juegoEditando ? "Guardar Cambios" : "Agregar Juego"}
+      <button type="submit">
+        {juegoEditando ? "💾 Guardar Cambios" : "➕ Agregar Juego"}
       </button>
     </form>
   );

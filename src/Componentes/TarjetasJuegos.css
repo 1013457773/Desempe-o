@@ -1,0 +1,76 @@
+/* Fondo elegante tipo tarjeta gamer */
+.card-juego {
+  background: linear-gradient(145deg, #2e0f4f, #3f1b6c);
+  color: #f8f8f8;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 15px rgba(172, 63, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #a855f7;
+  height: 100%;
+}
+
+/* Animación al pasar el mouse */
+.card-juego:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+}
+
+/* Título destacado */
+.card-juego h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0aaff;
+  margin-bottom: 1rem;
+}
+
+/* Texto general */
+.card-juego p {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+/* Contenedor de botones */
+.card-juego .acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Botones personalizados */
+.card-juego .acciones button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Botón Editar */
+.card-juego .acciones button.editar {
+  background: #facc15;
+  color: #000;
+}
+
+.card-juego .acciones button.editar:hover {
+  background: #fbbf24;
+  transform: scale(1.05);
+}
+
+/* Botón Eliminar */
+.card-juego .acciones button.eliminar {
+  background: #ef4444;
+  color: white;
+}
+
+.card-juego .acciones button.eliminar:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}

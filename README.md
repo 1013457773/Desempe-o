@@ -30,3 +30,34 @@ Sistema web para gestionar videojuegos con autenticación, registro y funcionali
 ---
 
 ## 📁 Estructura del proyecto
+
+/mi-proyecto
+├── public/
+│ └── index.html
+├── src/
+│ ├── Pages/
+│ │ ├── Inicio.jsx
+│ │ ├── Registro.jsx
+│ │ └── PanelPrincipal.jsx
+│ ├── Componentes/
+│ │ ├── FormularioJuego.jsx
+│ │ ├── TarjetaJuego.jsx
+│ │ └── RutasProtegida.jsx
+│ ├── Contexto/
+│ │ └── Autenticacion.jsx
+│ ├── servicios/
+│ │ └── api.js
+│ ├── estilos/
+│ │ └── index.css
+│ ├── App.jsx
+│ └── main.jsx
+├── datos.json
+├── package.json
+└── vite.config.js
+
+1. Clona el proyecto:
+
+```bash
+git https://github.com/1013457773/Desempe-o.git
+cd mi-proyecto
+```
